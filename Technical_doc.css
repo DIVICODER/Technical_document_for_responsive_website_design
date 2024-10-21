@@ -1,0 +1,143 @@
+/* Global Styles */
+html, body {
+    min-width: 290px;
+    color: #4d4e53;
+    background-color: #ffffff;
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Layout Styles */
+body {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Navbar Styles (Left Sidebar) */
+.navbar {
+    background-color: #f8f9fa; /* Light grey background */
+    width: 250px;
+    height: 100vh; /* Full height */
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em; /* Adjust gap between links */
+}
+
+.navbar li {
+    display: block;
+}
+
+/* Remove border around nav-link */
+.nav-link {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    padding: 0.5em;
+    display: block;
+    text-align: left; /* Align text to the left */
+    padding-left: 1em; /* Add padding for alignment */
+    font-size: 1.1em; /* Adjust font size */
+}
+
+/* Highlight the hovered link */
+.nav-link:hover {
+    color: #007bff;
+    background-color: #e9ecef; /* Background highlight on hover */
+    border-radius: 5px; /* Small border-radius for hover effect */
+}
+
+/* Main Content Styles */
+#main-doc {
+    margin-left: 260px; /* Space for the sidebar */
+    padding: 2em;
+    width: calc(100% - 260px); /* Adjust content width minus the sidebar */
+    max-width: 1200px;
+    background-color: #ffffff;
+    height: 100%;
+    overflow-y: auto;
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 2em;
+}
+
+section header {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+/* Highlight Class for Key Properties */
+.highlight {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1em;
+    list-style: none;
+    padding: 1em;
+    border: 1px solid black;
+    background-color: #f9f9f9;
+}
+
+.highlight li {
+    padding: 0.5em;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Preformatted Text Styling */
+pre {
+    background-color: #f4f4f4;
+    padding: 1em;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin-bottom: 1em;
+}
+
+/* Link Styling */
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media only screen and (max-width: 768px) {
+    .navbar {
+        width: 200px;
+    }
+
+    #main-doc {
+        margin-left: 210px;
+        width: calc(100% - 210px);
+        padding: 1em;
+    }
+
+    .highlight {
+        grid-template-columns: 1fr;
+    }
+}
