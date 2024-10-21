@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Technical_doc.css">
+    <title>Technical Document</title>
+</head>
+<body>
+
+    
+    <nav class="navbar">
+        <ul>
+            <li> 
+                    <a class="nav-link" href="#Responsive_Web_Design">Responsive Web Design</a>
+            </li>
+
+            <li>
+                <a class="nav-link" href="#Media_Queries">Media Queries</a>
+            </li>
+
+            <li>
+                <a class="nav-link" href="#CSS_Flexbox">CSS Flexbox</a>
+            </li>
+
+            <li>
+                <a class="nav-link" href="#CSS_Grid">CSS Grid</a>
+            </li>
+
+            <li>
+                <a class="nav-link" href="#Fluid_Layouts_with_Percentages">Fluid Layouts with Percentages</a>
+            </li>
+            
+            <li>
+                <a class="nav-link" href="#Viewport_and_Meta_Tags">Viewport and Meta Tag</a>
+            </li>
+            
+            <li>
+                <a class="nav-link" href="#Responsive_Images">Responsive Images</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="main-doc">
+        <section id="Responsive_Web_Design">
+            <header>Responsive Web Design</header>
+            <p>Responsive web design ensures that a website's layout adjusts smoothly across a range of devices, from desktops to mobile phones. It involves using flexible grids, images, and CSS media queries to create an optimal user experience across different screen sizes.</p>
+        </section>
+        
+        <section id="Media_Queries">
+            <header>Media Queries</header>
+            <p class="mq">Definition: Media queries allow you to apply different CSS styles based on the devices characteristics, such as its width, height, orientation, or resolution.
+
+                <ul>
+                    <li><b>How they work:</b> A media query consists of a @media rule followed by the condition (or query) and the styles to apply when the condition is true.</li>
+                    <li><b>Use Cases:</b> To design websites that adapt to different screen sizes (e.g., mobile, tablet, desktop).</li>
+                </ul>
+                <lablel for="syntax">Syntax</lablel>
+                <pre>@media only screen and (max-width: 768px) {
+                    body {
+                       font-size: 14px;
+                    }
+                 }</pre>
+                 <label for="s1-exam">Example:</label>
+                    <pre>@media only screen and (max-width: 768px) {
+                        .container {
+                          display: block;
+                          width: 100%;
+                        }
+                      }
+                      
+                      @media only screen and (min-width: 769px) {
+                        .container {
+                          display: flex;
+                          width: 80%;
+                        }
+                      }</pre>
+
+                      <label for="Key Points">Key Points</label>
+            <ul class="highlight">
+                <li><b>max-width:</b> Styles apply when the device width is below or equal to the defined value.</li>
+                <li><b>min-width:</b> Styles apply when the device width is above or equal to the defined value.</li>
+                <li><b>only screen:</b> Limits styles to screen devices (not printers or speech devices).</li>
+            </ul>
+
+            </p>
+        </section>
+
+
+        <section id="CSS_Flexbox">
+            <header>CSS Flexbox</header>
+            <p><b>Definition:</b>Flexbox is a layout model that provides an efficient way to layout, align, and distribute space among elements in a container, even when their size is dynamic or unknown.
+                <label>Key Properties:</label>
+                <ul class="highlight">
+                    <li><b>display: flex;:</b>Defines a grid container.</li>
+                    <li><b>flex-direction: </b>Specifies the number and size of columns in the grid.</li>
+                    <li><b>justify-content:</b> Specifies the number and size of rows.</li>
+                    <li><b>align-items: </b> Specifies the space between grid items.</li>
+                    <li><b>flex-wrap:</b>Specifies the column start and end for a grid item.</li>
+                    <li><b>flex-grow: </b>Specifies the row start and end for a grid item.</li>
+                    <li><b>flex-shrink:</b>Controls how an item shrinks relative to others.</li>
+                    <li><b>flex-basis:</b>Defines the initial size of an item before flex-grow or flex-shrink.</li>
+                </ul>
+
+                <lablel for="syntax">Syntax</lablel>
+                <pre>.container {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                 }</pre>
+                 <label for="s1-exam">Example:</label>
+                    <pre>..flex-container {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 300px;
+                      }
+                      
+                      .item {
+                        flex-basis: 200px;
+                        background-color: lightblue;
+                        padding: 10px;
+                      }</pre>
+
+                      <label for="Key_Points">Key Points</label>
+            <ul>
+                <li>Flexbox is particularly useful for one-dimensional layouts (either row or column).</li>
+                <li>Easily handles centering, spacing, and ordering of elements in a flexible manner.</li>
+            </ul>
+
+            </p>
+        </section>
+        <section id="CSS_Grid">
+            <header>CSS Grid</header>
+            <p><b>Definition:</b> CSS Grid is a two-dimensional layout system, meaning it can handle both rows and columns, offering more control over complex layouts than Flexbox.
+                <label>Key Properties:</label>
+                <ul class="highlight">
+                    <li><b>display: grid: </b>Defines a grid container.</li>
+                    <li><b>grid-template-columns:</b>Specifies the number and size of columns in the grid.</li>
+                    <li><b>grid-template-rows: </b> Specifies the number and size of rows.</li>
+                    <li><b>grid-gap: </b> Specifies the space between grid items.</li>
+                    <li><b>grid-column: </b>Specifies the column start and end for a grid item.</li>
+                    <li><b>grid-row:</b>Specifies the row start and end for a grid item.</li>
+                </ul>
+
+                <lablel for="syntax">Syntax</lablel>
+                <pre>.container {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+                    grid-gap: 20px;
+                  }
+                  
+                  .item {
+                    background-color: lightgreen;
+                    padding: 10px;
+                  }</pre>
+                 <label for="s1-exam">Example:</label>
+                    <pre>.grid-container {
+                        display: grid;
+                        grid-template-columns: 200px 1fr 1fr;
+                        grid-gap: 10px;
+                      }
+                      
+                      .grid-item {
+                        padding: 20px;
+                        background-color: lightcoral;
+                      }</pre>
+
+                      <label for="Key_Points">Key Points</label>
+            <ul>
+                <li>CSS Grid is ideal for two-dimensional layouts (rows and columns).</li>
+                <li>You can create responsive grid layouts with <b>grid-template-areas</b> and <b>media queries</b>.</li>
+            </ul>
+
+            </p>
+        </section>
+
+
+        <section id="Fluid_Layouts_with_Percentages">
+            <header>Fluid Layouts with Percentages</header>
+            <p><b>Definition:</b> A fluid layout uses relative units (such as percentages) to make the layout elements adjust according to the viewport size, making the design flexible and adaptive.
+                <label>Key Properties:</label>
+                <ul class="highlight">
+                    <li>Use percentages for widths, heights, margins, and padding to ensure elements grow or shrink relative to their parent containers.</li>
+                    <li>Avoid fixed pixel values to ensure flexibility.</li>
+        
+                </ul>
+
+                <lablel for="syntax">Syntax</lablel>
+                <pre>/*.container {
+                    width: 100%;
+                    padding: 10px;
+                  }
+                  
+                  .item {
+                    width: 50%; /* This will take 50% of the container width */
+                  }*/</pre>
+                 <label for="s1-exam">Example:</label>
+                    <pre>.fluid-container {
+                        width: 90%; Container takes up 90% of the viewport width 
+                        margin: 0 auto; Center the container 
+                      }
+                      
+                      .fluid-item {
+                        width: 100%; Item takes full width of the container 
+                      }
+                      </pre>
+
+                      <label for="Key_Points">Key Points</label>
+            <ul>
+                <li>Fluid layouts ensure your design adjusts automatically to the user's screen size.</li>
+                <li>Using percentage-based widths allows layouts to adapt to different screen sizes without media queries.</li>
+            </ul>
+
+            </p>
+        </section>
+
+        <section id="Viewport_and_Meta_Tags">
+            <header>Viewport and Meta Tags</header>
+            <p><b>Definition:</b>The viewport meta tag controls the layout on mobile browsers by setting the width and scale of the viewport.
+                <label>Key Properties:</label>
+                <ul class="highlight">
+                    <li><b>width=device-width:</b> Sets the viewport width to the width of the device, ensuring content fits the screen.</li>
+                    <li><b>initial-scale=1.0:</b>Sets the initial zoom level when the page is first loaded.</li>
+                </ul>
+
+                <lablel for="syntax">Syntax</lablel>
+                <pre><meta name="viewport" content="width=device-width, initial-scale=1.0"></pre>
+                      <label for="Key_Points">Key Points</label>
+            <ul>
+                <li>Without the viewport meta tag, mobile devices may render the page at a desktop width, making it look tiny and hard to read.</li>
+                <li>Ensures content is scaled correctly on mobile devices and adjusts responsively.</li>
+            </ul>
+
+            </p>
+
+        </section>
+
+        <section id="Responsive_Images">
+            <header>Responsive Images</header>
+            <p><b>Definition:</b> Responsive images adjust to different screen sizes, improving performance by loading the appropriate size for the device.
+                <label>Key Properties:</label>
+                <ul class="highlight">
+                    <li><b>Using srcset: </b>Provides multiple image versions for different screen sizes.</li>
+                    <li><b>Using CSS:</b> Apply media queries to adjust the size of images.</li>
+                </ul>
+
+                <lablel for="syntax">Syntax</lablel>
+                <pre>.container {
+                    /* Responsive image using srcset and sizes */
+                    img {
+                        src: "image-small.jpg";
+                        srcset: "image-large.jpg 1024w, image-medium.jpg 640w, image-small.jpg 320w";
+                        sizes: "(max-width: 600px) 320px, (max-width: 1024px) 640px, 1024px";
+                        alt: "Responsive image";
+                    }
+                }
+</pre>
+                      <label for="Key_Points">Key Points</label>
+            <ul>
+                <li>Use srcset and sizes to serve appropriate images for different screen resolutions.</li>
+                <li>Helps in optimizing performance by delivering the right image size for the user's device.</li>
+            </ul>
+
+            </p>
+        </section>
+    </main>
+    
+</body>
+</html>
