@@ -9,15 +9,21 @@ CSS Grid
 Fluid Layouts with Percentages
 Viewport and Meta Tags
 Responsive Images
+
+
+
 Features
 Comprehensive Documentation: Covers essential topics in responsive web design including CSS Flexbox, Grid, media queries, and fluid layouts.
 Practical Code Examples: Provides clear syntax and examples for each concept, demonstrating how they can be used in real-world scenarios.
 Interactive Navigation: A sidebar navigation allows for easy exploration of topics within the documentation.
 Responsive Layout: The page itself is fully responsive, using the techniques it documents.
+
+
 Project Overview
 This document is structured to explain and demonstrate various methods for building responsive websites, from basic layout techniques to more advanced ones like CSS Grid and Flexbox. Each section includes definitions, key properties, syntax, examples, and important points to consider.
 
 Key Topics Covered:
+
 Responsive Web Design: Introduction to responsive layouts and why they're essential for modern web development.
 Media Queries: Applying different styles based on screen size and device capabilities.
 CSS Flexbox: A one-dimensional layout system to align and distribute space efficiently within a container.
@@ -25,13 +31,6 @@ CSS Grid: A two-dimensional layout system providing greater control over web pag
 Fluid Layouts: Using percentages instead of fixed units to create flexible designs that adapt to different screen sizes.
 Viewport Meta Tags: Ensures mobile devices render pages correctly by controlling the viewport's size and scale.
 Responsive Images: Techniques to serve different image sizes based on the device's screen resolution to optimize performance.
-How to Use
-Clone the repository:
-
-bash
-Copy code
-git clone https://github.com/your-username/responsive-web-design-doc.git
-Open index.html in your browser to view the technical documentation.
 
 Explore different sections using the sidebar navigation.
 
