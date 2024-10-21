@@ -1,4 +1,4 @@
-#Responsive Web Design Technical Documentation
+#Responsive Web Design Technical Documentation#
 This project is a Responsive Web Design Technical Document, providing an overview of key concepts and techniques used in creating responsive web layouts. The document serves as a helpful guide for developers who want to learn or reference best practices for building responsive websites using CSS media queries, Flexbox, Grid, fluid layouts, and other essential tools.
 
 Table of Contents
